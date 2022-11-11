@@ -2,7 +2,7 @@
 int[] arrNum = new int[size];
 int min = 0;
 int max = 10;
-int sumNegative = 0;
+int sumNegativePos = 0;
 Random rnd = new Random();
 
 for (int i = 0; i < arrNum.Length; i++)
@@ -11,12 +11,11 @@ for (int i = 0; i < arrNum.Length; i++)
 }
 PrintArray(arrNum);
 
-for(int i = 0; i < arrNum.Length; i++)
+for(int i = 1; i < arrNum.Length; i+=2)
 {
-    if(i%2 == 0)
-        sumNegative+= arrNum[i];
+    sumNegativePos+= arrNum[i];
 }
-Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях  {sumNegative}");
+Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях  {sumNegativePos}");
 
 // Functions
 void PrintArray(int[] array)
