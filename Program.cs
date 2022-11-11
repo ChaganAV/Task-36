@@ -1,7 +1,7 @@
-﻿int size = 15;
+﻿int size = 5;
 int[] arrNum = new int[size];
 int min = 0;
-int max = 200;
+int max = 10;
 int sumNegative = 0;
 Random rnd = new Random();
 
@@ -13,10 +13,10 @@ PrintArray(arrNum);
 
 for(int i = 0; i < arrNum.Length; i++)
 {
-    if(arrNum[i]%2 == 0)
-     sumNegative++;
+    if(i%2 == 0)
+        sumNegative+= arrNum[i];
 }
-Console.WriteLine($"Количество четных чисел  {sumNegative}");
+Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях  {sumNegative}");
 
 // Functions
 void PrintArray(int[] array)
